@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
          'Juninho Sabores R$4,00' , 
         'Lata Sabores 350ml R$6,50',
         'Lata Coca-Cola 350ml R$6,80',
-        'Guaraná 600ml R$8,50',
+        'Guaraná 600ml R$7,50',
         'CoCa-Cola 600ml R$8,50',
         'Guaraná 1,5L R$11,00',
         'Coca-Cola 1,5L R$13,00',
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- BOTÃO DO WHATSAPP ---
     const whatsappLink = document.getElementById('whatsapp-link');
-    const whatsappNumber = 5527997401150;
+    const whatsappNumber = 5527988039857;
 
     whatsappLink.addEventListener('click', (event) => {
         event.preventDefault();

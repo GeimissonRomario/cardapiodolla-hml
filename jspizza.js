@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // WhatsApp
     const whatsappLink = document.getElementById('whatsapp-link');
-    const whatsappNumber = 5527997401150;
+    const whatsappNumber = 5527988039857;
 
     whatsappLink.addEventListener('click', (event) => {
         event.preventDefault();
