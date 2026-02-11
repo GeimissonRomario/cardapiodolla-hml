@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const tamanhos = [
-        "P - 4 PEDAÇOS - R$29,00",
-        "M - 6 PEDAÇOS - R$38,00",
-        "G - 8 PEDAÇOS - R$49,00"
+        "P - 4 PEDAÇOS - R$31,99",
+        "M - 6 PEDAÇOS - R$41,99",
+        "G - 8 PEDAÇOS - R$51,99"
     ];
 
     // 🔥 Refrigerantes adicionados (mesma lista do pastel)

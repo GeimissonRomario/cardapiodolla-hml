@@ -2,11 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const esfirrasSalgadas = [
         'Carne',
-        'Presunto e Queijo',
-        'Frango com Catupiry',
-        'Bacon',
-        'Calabresa',
-        'Palmito'
+        'Carne e Queijo',
+        'Queijo e Presunto',
+        'Queijo Frango e Catupiry',
+        'Queijo e Calabresa',
+        'Queijo e Bacon',
+        'Queijo e Palmito'
     ];
 
     const esfirrasDoces = [
