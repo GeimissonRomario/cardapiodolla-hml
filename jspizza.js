@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
          'Juninho Sabores R$4,00' , 
         'Lata Sabores 350ml R$6,50',
         'Lata Coca-Cola 350ml R$6,80',
-        'Guaraná 600ml R$8,50',
+        'Guaraná 600ml R$7,50',
         'CoCa-Cola 600ml R$8,50',
         'Guaraná 1,5L R$11,00',
         'Coca-Cola 1,5L R$13,00',
