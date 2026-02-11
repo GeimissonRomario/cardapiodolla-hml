@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const pasteis = [
         'Pastel de Carne',
+        'Pastel de Queijo',
+        'Pastel de Frango',
+        'Pastel de Frango com Palmito',
         'Pastel de Carne com Queijo',
         'Pastel de Frango com Queijo',
         'Pastel de Frango com Catupiry',
