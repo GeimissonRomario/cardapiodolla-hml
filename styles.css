@@ -1,15 +1,75 @@
-
+/* ===== BASE ===== */
 body {
-    
-    font-family:'Comic Sans MS';
-    background-color: #e6f41a;
     margin: 0;
     padding: 0;
-    
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    background-color: #e6f41a;
 }
-  
-   
- .container {
+
+body.index-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: #f3f714;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ===== INDEX ===== */
+body.index-layout h1 {
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-option {
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-item {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: 4px solid #ddd;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-item:hover {
+    transform: scale(1.12);
+}
+
+.menu-option:nth-child(1) .menu-item { border-color: #ff6347; }
+.menu-option:nth-child(2) .menu-item { border-color: #32cd32; }
+.menu-option:nth-child(3) .menu-item { border-color: #18e0fa; }
+
+.label {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* ===== INNER PAGES ===== */
+.container {
     width: 80%;
     margin: 0 auto;
     background-color: #000000;
@@ -20,13 +80,13 @@ body {
     font-size: 15px;
 }
 
-h1 {
+.container h1 {
     text-align: center;
     color: #fefbfb;
     font-size: 55px;
 }
 
-div h2{
+div h2 {
     color: #ffffff;
 }
 
@@ -43,7 +103,6 @@ div h2{
 ul {
     list-style: none;
     padding: 0;
-    
 }
 
 li {
@@ -54,7 +113,6 @@ li {
     border: 1px solid #f47c1a;
     display: flex;
     justify-content: space-between;
-    
 }
 
 .order-button {
@@ -73,21 +131,22 @@ li {
     background-color: #1ebe55;
 }
 
-footer{
-    color: #000000;
+footer {
+    color: #ffffff;
+    text-align: center;
 }
-/* Estiliza o checkbox */
+
 input[type="checkbox"] {
     width: 15px;
     height: 15px;
-    accent-color: #000; /* cor interna do checkbox */
+    accent-color: #000;
     margin-right: 10px;
     cursor: pointer;
-  }
-  
-  /* Estiliza o input de quantidade */
-  input[type="number"] {
-    width: 200px;
+    transform: scale(1.2);
+}
+
+input[type="number"] {
+    width: 50px;
     height: 10px;
     border: 1px solid #000;
     border-radius: 4px;
@@ -95,41 +154,20 @@ input[type="checkbox"] {
     font-size: 16px;
     margin-left: 10px;
     text-align: center;
-  }
-  .imagem-pasteis {
+}
+
+.imagem-destaque {
     width: 500px;
     height: 400px;
     border-radius: 50%;
     border: 4px solid white;
     display: block;
     margin: 0 auto;
-  }
-  .imagem-pizza {
-    width: 500px;
-    height: 400px;
-    border-radius: 50%;
-    border: 4px solid white;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  /* Quando a tela for menor que 600px (ex: celular), a imagem diminui */
-  @media (max-width: 600px) {
-    .imagem-pasteis {
-      width: 180px;
-      height: 120px;
-    }
 }
-     /* Quando a tela for menor que 600px (ex: celular), a imagem diminui */
-  @media (max-width: 600px) {
-    .imagem-pizza {
-      width: 180px;
-      height: 120px;
-    }
-}
+
 .btn {
     display: inline-block;
-    padding: 5px 5px;
+    padding: 5px;
     font-size: 24px;
     cursor: pointer;
     text-align: center;
@@ -140,48 +178,79 @@ input[type="checkbox"] {
     border: none;
     border-radius: 35px;
     box-shadow: 0 9px #f47c1a;
-    ;
-  }
-  
-  .btn:hover {background-color: #e6f41a}
-  
-  .btn:active {
-    background-color: # ;
+}
+
+.btn:hover {
+    background-color: #e6f41a;
+}
+
+.btn:active {
+    background-color: #d4e018;
     box-shadow: 0 5px #f47c1a;
     transform: translateY(4px);
-  }
-  input[type="checkbox"] {
-    transform: scale(1.2);
-    margin-right: 8px;
 }
+
 .button-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
 }
 
 .modern-btn {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-  background: linear-gradient(135deg, #000000, #000000);
-  border: none;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #000000, #000000);
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .modern-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 .modern-btn:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    body.index-layout {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .menu-item {
+        width: 130px;
+        height: 130px;
+    }
+
+    body.index-layout h1 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .imagem-destaque {
+        width: 180px;
+        height: 120px;
+    }
 }

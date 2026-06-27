@@ -3,30 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cardápio de Pizzas da Pastelaria Dolla — Pizzas artesanais em vários tamanhos. Faça seu pedido pelo WhatsApp.">
     <title>Cardápio de Pizzas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="pizza.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        input[type="checkbox"] {
-            transform: scale(1.2);
-            margin-right: 8px;
-        }
-        
-        input[type="number"] {
-            margin-left: 10px;
-            width: 50px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-
-        <center><a href="index.html" class="modern-btn inicio">🏠 Início</a></center>
+        <div class="text-center">
+            <a href="index.html" class="modern-btn inicio">🏠 Início</a>
+        </div>
 
         <h1>Pizza da Dolla</h1>
-        <img src="pizza.jpg" alt="Pizza" class="imagem-pizza">
+        <img src="pizza.jpg" alt="Pizza" class="imagem-destaque" loading="lazy">
 
         <h1>Cardápio de Pizzas</h1>
 
@@ -34,22 +24,22 @@
             <h2>Pizzas</h2>
             <ul id="pizzas-tradicionais"></ul>
         </div>
-        
+
         <div class="menu tamanhos">
             <h2>Tamanhos</h2>
             <ul id="tamanhos-pizza"></ul>
             <h1>Adicional de Ingrediente R$2,50</h1>
         </div>
 
-        <!-- 🔥 Refrigerantes adicionados corretamente -->
         <div class="menu">
             <h2>Refrigerantes</h2>
             <ul id="refrigerantes"></ul>
         </div>
 
-                
-        <a id="whatsapp-link" href="#" class="order-button"><i class="fa-brands fa-whatsapp"></i> Faça seu pedido pelo WhatsApp</a>
-        
+        <a id="whatsapp-link" href="#" class="order-button">
+            <i class="fa-brands fa-whatsapp"></i> Faça seu pedido pelo WhatsApp
+        </a>
+
         <footer>
             <center>
                 <a href="index.html" class="modern-btn inicio">🏠 Início</a>
@@ -58,13 +48,8 @@
             </center>
         </footer>
     </div>
-    
+
+    <script src="menu-shared.js"></script>
     <script src="jspizza.js"></script>
-    
-    <footer>
-        <center>
-            <h5>© 2024 <a href="https://linktr.ee/geimisson" target="_blank">Geimisson Romário.</a> Todos os direitos reservados.</h5>
-        </center>
-    </footer>
 </body>
 </html>

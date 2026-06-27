@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'CAPIXABA 3 (Carne, ovo e azeitona e cheddar)',
         'CAPIXABA 4 (Carne, ovo e azeitona e queijo)',
         'MODINHA (Toscana, vinagrete e milho)',
-        
     ];
 
     const pasteisEsp = [
@@ -32,67 +31,28 @@ document.addEventListener('DOMContentLoaded', () => {
         'VEGETARIANO (Palmito, queijo, milho, azeitona e orégano)',
         'PORTUGUESA (Presunto, queijo, ovo, tomate e azeitona)',
         'A MODA CARNE (Carne, bacon, queijo, calabresa, milho e azeitona)',
-        'A MODA FRANGO (Frango, bacon, queijo, calabresa, milho e azeitona)'
-        
+        'A MODA FRANGO (Frango, bacon, queijo, calabresa, milho e azeitona)',
     ];
 
-    const pasteisGula = [
-        
-    ];
-
-    const refrigerantes = [
-        'Juninho Sabores R$4,00' , 
-        'Lata Sabores 350ml R$6,50',
-        'Lata Coca-Cola 350ml R$6,80',
-        'Guaraná 600ml R$7,50',
-        'CoCa-Cola 600ml R$8,50',
-        'Guaraná 1,5L R$11,00',
-        'Coca-Cola 1,5L R$13,00',
-        
-    ];
-
-    const createListItem = (item, listId) => {
-        const li = document.createElement('li');
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.value = item;
-        const quantityInput = document.createElement('input');
-        quantityInput.type = 'number';
-        quantityInput.min = 1;
-        quantityInput.value = 1;
-        quantityInput.style.marginLeft = '10px';
-        quantityInput.style.width = '50px';
-        li.appendChild(checkbox);
-        li.appendChild(document.createTextNode(item));
-        li.appendChild(quantityInput);
-        document.getElementById(listId).appendChild(li);
-    };
-
-    //pasteis.forEach(pastel => createListItem(pastel, 'pasteis'));
     pasteis.forEach(pastel => createListItem(pastel, 'pasteis'));
     pasteisEsp.forEach(pastelEsp => createListItem(pastelEsp, 'pasteisEsp'));
-    pasteisGula.forEach(pastelGula => createListItem(pastelGula, 'pasteisGula'));
-    refrigerantes.forEach(refrigerante => createListItem(refrigerante, 'refrigerantes'));
+    REFRIGERANTES.forEach(refri => createListItem(refri, 'refrigerantes'));
 
-    const whatsappLink = document.getElementById('whatsapp-link');
-    const whatsappNumber = 5527988039857; // Substitua pelo seu número do WhatsApp
-
-    whatsappLink.addEventListener('click', (event) => {
+    document.getElementById('whatsapp-link').addEventListener('click', (event) => {
         event.preventDefault();
         const selectedItems = [];
+
         document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
             const quantity = checkbox.nextElementSibling.value;
             selectedItems.push(`${checkbox.value} - Quantidade: ${quantity}`);
         });
 
-        if (selectedItems.length > 0) {
-            const whatsappMessage = `Olá, gostaria de fazer um pedido de Pastel:"
-            
-            \n${selectedItems.join('\n')}`;
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappURL, '_blank');
-        } else {
-            alert("Por favor, selecione ao menos um item para fazer o pedido.");
+        if (selectedItems.length === 0) {
+            alert('Por favor, selecione ao menos um item para fazer o pedido.');
+            return;
         }
+
+        const message = `Olá, gostaria de fazer um pedido de Pastel:\n\n${selectedItems.join('\n')}\n\nObrigado!`;
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
     });
 });
